@@ -1,0 +1,234 @@
+:root {
+  --primary-color: #00ffff;
+  --background-color: #1a1a1a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Set to your desired background color */
+}
+
+/* Navbar */
+.navbar {
+  margin: 0 !important;
+  padding: 10px 20px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  width: 80px;
+}
+
+/* Desktop Menu */
+.nav-pills {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.nav-item .active {
+  color: var(--primary-color) !important;
+  background-color: transparent !important;
+}
+
+.nav-item a:hover {
+  color: var(--primary-color);
+}
+
+/* Resume Button */
+.resume-button {
+  background-color: #0cacac;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.resume-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.resume-button i {
+  color: #fff;
+  background: transparent;
+}
+
+/* Hamburger Menu (Mobile) */
+.navbar-toggler {
+  display: none;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #fff;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* User Title */
+.user-title h3 {
+  color: var(--primary-color);
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.user-title h6 {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.user-title p {
+  font-size: 16px;
+}
+
+/* Social Icons */
+.social-icon li a i {
+  color: var(--primary-color);
+  font-size: 25px;
+}
+
+/* Education & Expertise */
+.education {
+  margin-top: 45%;
+}
+
+/* Contact Form */
+.contact-form {
+  border-color: #ffffff !important;
+  box-shadow: 4px 5px 10px #808080;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea.form-control {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  background-color: transparent !important;
+  color: #fff;
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+button[type="submit"] {
+  background-color: #6c757d;
+  color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-pills {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-pills.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  .nav-item {
+    padding: 10px 0;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .resume-button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .user-title h3 {
+    font-size: 50px;
+  }
+
+  .user-title h6 {
+    font-size: 18px;
+  }
+
+  .education {
+    margin-top: 20%;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: auto;
+  }
+}
